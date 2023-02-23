@@ -1,0 +1,68 @@
+{
+  "name": "digitalcz/exporter",
+  "type": "library",
+  "description": "",
+  "keywords": [
+    "exporter",
+    "excel",
+    "xlsx"
+  ],
+  "homepage": "https://github.com/digitalcz/exporter",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Digital Solutions s.r.o.",
+      "email": "devs@digital.cz",
+      "homepage": "https://digital.cz",
+      "role": "Developer"
+    },
+    {
+      "name": "Pavel Stejskal",
+      "email": "pavel.stejskal@gmail.com",
+      "homepage": "https://github.com/spajxo",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "digitalcz/streams": "^0.2.1",
+    "phpoffice/phpspreadsheet": "^1.27"
+  },
+  "require-dev": {
+    "digitalcz/coding-standard": "^0.0.1",
+    "phpstan/extension-installer": "^1.2.0",
+    "phpstan/phpstan": "^1.10.0",
+    "phpstan/phpstan-phpunit": "^1.3.4",
+    "phpstan/phpstan-strict-rules": "^1.5.0",
+    "phpunit/phpunit": "^10.0.11",
+    "symfony/var-dumper": "^v6.2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "DigitalCz\\Exporter\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DigitalCz\\Exporter\\": "tests"
+    }
+  },
+  "scripts": {
+    "tests": "phpunit",
+    "phpstan": "phpstan analyse",
+    "cs": "phpcs -p",
+    "csfix": "phpcbf -p",
+    "checks": [
+      "@cs",
+      "@phpstan",
+      "@tests"
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "phpstan/extension-installer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

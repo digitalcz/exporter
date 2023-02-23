@@ -1,0 +1,12 @@
+###> IDE ###
+/.idea
+
+# Composer
+/vendor
+/build
+
+# Build
+/composer.lock
+.phpunit.result.cache
+.phpcs.cache
+/.phpunit.cache/
